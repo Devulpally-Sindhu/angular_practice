@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_practice';
+  students:any[]=[];
+
+  newStr:string="";
+
+  addStudent(){
+    this.students.push(this.newStr);
+    this.newStr=""
+  }
+
+  deleteStudent(i:number){
+    this.students.splice(i,1)
+
+  }
+
+ 
 }
