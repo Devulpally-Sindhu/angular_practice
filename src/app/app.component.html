@@ -1,14 +1,5 @@
 <div class="mybox">
     <h1>App component</h1>
-    <input type="text" [(ngModel)]="c1i">
-    <br>
-    <input type="text" [(ngModel)]="c2i">
-    <app-counter [count]="100" [step]="+c1i">
-        <h1>Sindhu</h1>
-        <h2>Devulapally</h2>
-    </app-counter>
-    <app-counter [count]="200" [step]="+c2i">
-        <h1>keerthi</h1>
-        <h2>Bairi</h2>
-    </app-counter>
+    <button>Add</button>   
+    <app-child (pfn)="abc($event)"></app-child>
 </div>

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_practice';
-  c1i:number=0
-  c2i:number=0
- 
+  abc(e:any){
+    alert(e)
+  }
 }
