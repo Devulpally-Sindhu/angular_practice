@@ -7,10 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_practice';
-
-  toggleValue:boolean=false;
-
-  toggle(){
-    this.toggleValue=!this.toggleValue
-  }
+  c1i:number=0
+  c2i:number=0
+ 
 }
