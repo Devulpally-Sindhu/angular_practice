@@ -1,0 +1,15 @@
+<div class="m-4">
+    <input type="text" [(ngModel)]="newTask">
+    <button (click)="add()">Add</button> 
+    <br>
+    <input type="radio" [(ngModel)]="selectedFilter" value="all" (change)="applyFilter()">  :All
+    <input type="radio" [(ngModel)]="selectedFilter" value="completed" (change)="applyFilter()"> :Completed
+    <input type="radio" [(ngModel)]="selectedFilter" value="pending" (change)="applyFilter()">  : Pending
+    <ul>
+        <li *ngFor="let x of filteredTasks;let i=index" [style.textDecoration]="x.status?'line-through':''">{{x.title}}
+            <button (click)="delete(i)">delete</button>
+            <button (click)="doneTask(i)" *ngIf="!x.status">done</button>
+            <button (click)="undoTask(i)" *ngIf="x.status">undo</button>
+        </li>
+    </ul>
+</div>
