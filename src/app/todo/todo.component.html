@@ -1,5 +1,0 @@
-<div >
-    <button (click)="delTask.emit(i)">delete</button>
-    <button (click)="doneTask.emit(i)" *ngIf="!x.status">done</button>
-    <button (click)="undoTask.emit(i)" *ngIf="x.status">undo</button>
-</div>
