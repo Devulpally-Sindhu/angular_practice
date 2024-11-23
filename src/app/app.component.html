@@ -1,9 +1,18 @@
 <div class="m-2 border border-success border-2 rounded">
     <h1>App component</h1>
-    <div>
-        <app-practice></app-practice>
-        <app-practice1></app-practice1>
-        <app-pracice-2></app-pracice-2>
+    <div class="m-2 border border-warning border-2 rounded">
+        <input type="text" [(ngModel)]="newPost.firstname">
+        <br>
+        <input type="text" [(ngModel)]="newPost.lastname">
+        <br>
+        <button (click)="add()">Add</button>
 
-    </div>   
+    </div >
+    <img src="https://lumopaints.com.au/wp-content/uploads/2023/12/IMG_2474.gif" *ngIf="isLoading">
+    <ul>
+        <li *ngFor="let country of countries">
+            {{country.name.common}}
+        </li>
+    </ul>
+   
 </div>
